@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import SpacexPosts from '../components/spacexPosts'
+import SpacexPosts from '../components/SpacexPosts'
 import { useQuery } from '@apollo/client'
 import { GET_LAUNCHES } from '../graphql/queries'
 
