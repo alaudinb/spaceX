@@ -19,8 +19,6 @@ function LaunchesDetails() {
       (launch) => launch.id === id
     );
 
-    console.log(launches)
-    
     return (
         <>
         <Head>
@@ -40,8 +38,8 @@ function LaunchesDetails() {
                 </MDBCarouselCaption>
               </MDBCarouselItem>
 
-              {launches[0].links.flickr_images.slice(1,3).map((image_url)=>(
-                <MDBCarouselItem className="post">
+              {launches[0].links.flickr_images.slice(1,3).map((image_url,index)=>(
+                <MDBCarouselItem className="post" key={index}>
                 <MDBCarouselElement src={image_url} alt='...' />
                 <MDBCarouselCaption className="post-text">
                   <h5>{launches[0].mission_name}</h5>
