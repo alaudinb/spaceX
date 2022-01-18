@@ -12,3 +12,15 @@ export const GET_LAUNCHES = gql`
   }
   
 `;
+export const GET_LAUNCH_BYID = gql`
+  query getLaunchById($id: ID!) {
+      launch(id: $id) {
+        id
+        mission_name
+        links {
+          flickr_images
+        }
+        details
+      }
+  }
+`;
